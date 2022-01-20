@@ -1,1 +1,1 @@
-export 'news_single_tile.dart';
+export 'single_news_tile.dart';

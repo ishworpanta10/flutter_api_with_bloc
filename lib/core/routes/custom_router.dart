@@ -12,6 +12,11 @@ Route onGenerateRoute(RouteSettings routeSettings) {
         builder: (context) => const HomeScreen(),
       );
 
+    case RouteConstants.routeNewsDetail:
+      return MaterialPageRoute(
+        builder: (context) => const NewsDetailScreen(),
+      );
+
     /// handling default error routes cases
     default:
       return MaterialPageRoute(

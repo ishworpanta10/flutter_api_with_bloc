@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_test/models/models.dart';
 import 'package:flutter_api_test/screens/screens.dart';
 import 'package:flutter_api_test/screens/widgets/widgets.dart';
 
@@ -13,8 +14,9 @@ Route onGenerateRoute(RouteSettings routeSettings) {
       );
 
     case RouteConstants.routeNewsDetail:
+      final newsModel = routeSettings.arguments as NewsModel;
       return MaterialPageRoute(
-        builder: (context) => const NewsDetailScreen(),
+        builder: (context) => NewsDetailScreen(newsModel: newsModel),
       );
 
     /// handling default error routes cases

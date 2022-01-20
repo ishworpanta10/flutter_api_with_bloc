@@ -10,9 +10,7 @@ import 'cubits/api_service_cubit/service_cubits.dart';
 Future<void> main() async {
   DioHelper.init();
   runApp(
-    MyApp(
-      apiRepository: ApiRepository(apiService: ApiService()),
-    ),
+    MyApp(apiRepository: ApiRepository(apiService: ApiService())),
   );
 }
 
@@ -33,6 +31,7 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Api Demo',
           theme: ThemeData(
             primarySwatch: Colors.blue,
